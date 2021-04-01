@@ -4,14 +4,15 @@
     <div id="inner-container">
       <div class="banner-container">
         <div class="content">
-          <h3>BANNER TITLE</h3>
+          <h3>{{ $t("bannerTitle") }}</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus
-            ligula semper metus pellentesque mattis. Maecenas volutpat, diam
-            enim sagittis quam, id porta quam. Sed id dolor consectetur
-            fermentum nibh volutpat, accumsan purus.
+            {{ $t("bannerContent") }}
           </p>
-          <button class="btn btn-primary">contact me</button>
+          <a href="#contact">
+            <button class="btn btn-primary toContact">
+              {{ $t("contactMe") }}
+            </button>
+          </a>
         </div>
         <img class="fusee" src="../assets/fusee.png" alt="" />
       </div>
@@ -28,7 +29,6 @@ export default {};
 @import "./src/assets/styles/variables.scss";
 
 #banner {
-  background-color: transparent;
   width: 100%;
   color: $white;
   position: relative;
@@ -100,5 +100,4 @@ export default {};
     }
   }
 }
-
 </style>

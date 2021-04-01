@@ -1,0 +1,133 @@
+{
+  "subTitle": "Développeur web & designer",
+  "contactMe": "Me contacter",
+  "aboutMe": "A propos de moi",
+  "aboutMe-citation": "N’importe quel idiot peut écrire du code qu'un ordinateur peut comprendre. Les bons programmeurs écrivent du code que les humains peuvent comprendre.",
+  "aboutMe-citation-author": "MARTIN FOWLER",
+  "aboutMe-first-bloc": "Bonjour et bienvenue sur mon site, je suis Abstrakts. Passionné depuis le plus jeune âge par la technologie et plus principalement je me suis très rapidement dit qu'il exisitai de multiples possibilité, presque infinie en terme de développement.",
+  "aboutMe-second-bloc": "C'est pourquoi j'ai d'abord entrepris des études de design, ayant une oeil taillé pour les arts graphiques. Pour ensuite entreprendre un long chemin vers l'apprentissage du développement web (L'un allant pas sans l'autre à mon sens). Méticuleux, passionné et à l'écoute, je saurais vous accompagner dans vos divers projets.",
+  "importantsProjects": {
+    "first": {
+      "title": "MyReptileScan",
+      "description": "Application de gestion pour les éleveurs de reptiles."
+    },
+    "second": {
+      "title": "Sharespace",
+      "description": "Application mobile de réseau social ayant pour but de sensibiliser au bien être de la planète."
+    },
+    "third": {
+      "title": "CashMachin",
+      "description": "Application de caisse enregistreuse spécialisé pour les prothésistes ongulaires"
+    }
+  },
+  "servicesTitle": "Services",
+  "servicesCategories": {
+    "first": {
+      "title": "UX / UI",
+      "citation": "L’essence d’un projet, c’est l’harmonie parfaite entre l’esthétique, l’utile et le juste.",
+      "auhtor": "Frank Lloyd Wright",
+      "col_1": "Graphiste et designer web depuis maintenant plus de 7 ans, les bases de l'UX et l'UI ne sont plus un secret pour moi.",
+      "col_2": "En réalisant votre projet, je m'assurerais que les utilisateurs de votre site soit agréablement surpris par la facilité de navigation au fil de vos pages."
+    },
+    "second": {
+      "title": "Développement web",
+      "citation": "Il semble que la perfection soit atteinte non quand il n’y a plus rien à ajouter, mais quand il n’y a plus rien à retrancher.",
+      "auhtor": "Antoine de Saint-Exupéry",
+      "col_1": "Qu'il s'agisse de votre portfolio, de votre site de présentation ou de votre e-commerce, ...",
+      "col_2": "je vous accompagnerai dans les moindres détails de votre projet afin de vous fournir un site et une expérience réussite."
+    },
+    "third": {
+      "title": "Développement mobile",
+      "citation": "N'importe quel code que vous avez écrit depuis 6 mois ou plus sans y regarder pourrait tout aussi bien avoir été écrit par quelqu'un d'autre.",
+      "auhtor": "Alan Eagleson",
+      "col_1": "Vous avez besoin de créer une application mobile pour gérer votre entreprise plus facilement ou pour un projet quelconque ?",
+      "col_2": "N'hésitez plus, l'expérience mobile etant en expension constente, je saurais m'adapter à toutes vos demandes."
+    },
+    "forth": {
+      "title": "Identité graphique",
+      "citation": "L'enseignement de l'informatique ne peut faire de personne un programmeur expert plus que l'étude des pinceaux et du pigment peut faire de quelqu'un un peintre expert.",
+      "auhtor": "Eric S. Raymond",
+      "col_1": "Vous ouvrez une nouvelle entreprise ou vous avez simplement envie de changer l'identité graphique de votre activité ?",
+      "col_2": "Carte de visites, logos, enseignes, etc ... Mon expertise sera entièrement à votre service."
+    }
+  },
+  "bannerTitle" : "Vous avez un projet ?",
+  "bannerContent" : "Contactez moi en cliquant sur le bouton ci-dessous, je serais heureux d'en discuter avec vous !",
+  "portfolioTitle" : "Mon portfolio",
+  "portfolioDescription" : "Vous pourrez, ci-dessous découvrir une selection de projets clients.",
+  "portfolioCategories" : {
+    "first" : {
+      "cat" : "Voir tous"
+    },
+    "second" : {
+      "cat" : "UX / UI"
+    },
+    "third" : {
+      "cat" : "Sites internet"
+    },
+    "forth" : {
+      "cat" : "Applications mobile"
+    },
+    "fifth" : {
+      "cat" : "Identité visuelle"
+    }
+  },
+  "skills" : "Mes compétences",
+  "skillsList" : {
+    "html" : {
+      "title" : "HTML 5",
+      "icon" : "fab fa-html5",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "js" : {
+      "title" : "JAVASCRIPT",
+      "icon" : "fab fa-js-square",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "css" : {
+      "title" : "CSS 3",
+      "icon" : "fab fa-css3-alt",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "mobile" : {
+      "title" : "MOBILE",
+      "icon" : "fas fa-mobile-alt",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "wordpress" : {
+      "title" : "WORDPRESS",
+      "icon" : "fab fa-wordpress",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "vue" : {
+      "title" : "VUE JS",
+      "icon" : "fab fa-vuejs",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "php" : {
+      "title" : "PHP",
+      "icon" : "fab fa-php",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "figma" : {
+      "title" : "FIGMA",
+      "icon" : "fab fa-figma",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "ui" : {
+      "title" : "UI / UX",
+      "icon" : "fas fa-fill-drip",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  },
+  "testimonialsTitle" : "Que disent-ils ?",
+  "contactTitle" : "Me contacter",
+  "contactSubtitle" : "Via mes réseaux sociaux",
+  "contactSubtitleForm" : "Ou par email",
+  "contactName" : "Votre nom / prénom",
+  "contactEmail" : "Votre adresse email",
+  "contactMessage" : "Votre message",
+  "contactSend" : "Envoyer le message",
+  "contactSent" : "Message envoyé avec succès",
+  "contactError" : "Une erreur s'est produite, veuillez r'essayer en remplissant tout les champs."
+}

@@ -1,11 +1,8 @@
 <template>
   <div id="portfolio" class="panel">
-    <h3>Portfolio</h3>
+    <h3>{{ $t('portfolioTitle') }}</h3>
     <p class="portfolio-description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula
-      semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis
-      quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat,
-      accumsan purus.
+      {{ $t('portfolioDescription') }}
     </p>
     <div class="portfolio-categories">
       <p
@@ -14,13 +11,13 @@
         @click="filter(category)"
         :class="{ 'is-active': selectedCat === category }"
       >
-        {{ category }}
+        {{ $t(category) }}
       </p>
     </div>
     <div id="portfolio-grid" class="grid-2-3">
       <div
         class="portfolio-item"
-        v-if="selectedCat === preview.category || selectedCat === 'All'"
+        v-if="selectedCat === preview.cat || selectedCat === categories[0]"
         v-for="(preview, i) in previews"
         :key="i"
       >
@@ -31,19 +28,13 @@
 </template>
 
 <script>
-import portfolio from "@/json/portfolio.json";
+import {portfolio, translatedCategories} from "@/js/portfolio.js";
 
 export default {
   data: () => {
     return {
-      selectedCat: "All",
-      categories: [
-        "All",
-        "Web designs",
-        "Web sites",
-        "Web apps",
-        "Mobile apps",
-      ],
+      selectedCat: null,
+      categories: [],
       previews: portfolio,
     };
   },
@@ -53,6 +44,11 @@ export default {
     },
   },
   mounted() {
+    for(let i = 0; i < translatedCategories.length; i++) {
+      this.categories.push(translatedCategories[i])
+    }
+    this.selectedCat = this.categories[0]
+    
     //this.previews = _.shuffle(this.previews);
   },
 };

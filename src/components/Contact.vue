@@ -1,38 +1,53 @@
 <template>
   <div id="contact" class="panel">
-    <h3>Contact me</h3>
+    <h3>{{ $t("contactTitle") }}</h3>
     <div id="inner-container">
-      <p>With my socials networks</p>
+      <p>{{ $t("contactSubtitle") }}</p>
       <div id="contact-bloc" class="grid-1-4">
         <div class="network-icon">
-          <a href="#" class="icon fab fa-facebook-square"></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Abstrakts.fr">
+            <i class="icon fab fa-facebook-square"></i>
+          </a>
         </div>
         <div class="network-icon">
-          <a href="#" class="icon fab fa-instagram"></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/abstrakts.fr">
+            <i class="icon fab fab fa-instagram"></i>
+          </a>
         </div>
         <div class="network-icon">
-          <a href="#" class="icon fab fa-whatsapp"></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            :href="`https://api.whatsapp.com/send?phone=${phone}`"
+            
+          >
+            <i class="icon fab fa-whatsapp"></i>
+          </a>
         </div>
         <div class="network-icon">
-          <a href="#" class="icon fab fa-facebook-messenger"></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Abstrakts.fr">
+            <i class="icon fab fa-facebook-messenger"></i>
+          </a>
         </div>
       </div>
-      <p>or with contact form</p>
-      <form id="contact-form" class="grid-1-2">
+      <p>{{ $t("contactSubtitleForm") }}</p>
+      <div id="contact-form" class="grid-1-2">
         <div class="contact-informations">
           <input
             class="input"
             type="text"
             name="name"
             id="name"
-            placeholder="NAME"
+            :placeholder="$t('contactName')"
+            v-model="contact.name"
           />
           <input
             class="input"
-            type="email"
+            type="text"
             name="email"
             id="email"
-            placeholder="EMAIL"
+            :placeholder="$t('contactEmail')"
+            v-model="contact.email"
           />
         </div>
         <div class="contact-message">
@@ -40,17 +55,81 @@
             class="input"
             name="message"
             id="message"
-            placeholder="MESSAGE"
+            :placeholder="$t('contactMessage')"
+            v-model="contact.message"
           ></textarea>
-          <button class="btn btn-secondary" type="submit">SEND MESSAGE</button>
+          <span class="errorMessage" v-show="mail.error">{{
+            $t("contactError")
+          }}</span>
+          <span class="successMessage" v-show="mail.sent">{{
+            $t("contactSent")
+          }}</span>
+          <button class="btn btn-secondary" @click="checkForm()">
+            {{ $t("contactSend") }}
+          </button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => {
+    return {
+      contactApi: "https://enqrwcxyjvhif75.m.pipedream.net",
+      contact: {
+        name: null,
+        email: null,
+        message: null,
+        mielpot: null,
+      },
+      phone: "33749217012",
+      mail: {
+        error: false,
+        sent: false,
+        regex: /^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i,
+        headers: new Headers(),
+      },
+    };
+  },
+  methods: {
+    sendForm() {
+      this.mail.sent = true;
+      this.mail.error = false;
+
+      if (this.mail.sent) {
+        fetch(this.contactApi, {
+          method: "POST",
+          headers: this.mail.headers,
+          mode: "cors",
+          body: JSON.stringify({
+            name: this.contact.name,
+            email: this.contact.email,
+            message: this.contact.message,
+          }),
+        });
+      }
+    },
+    checkForm() {
+      if (
+        this.contact.name !== null &&
+        this.contact.email !== null &&
+        this.contact.message !== null
+      ) {
+        if (this.contact.email.match(this.mail.regex)) {
+          this.sendForm();
+        } else {
+          this.mail.error = true;
+          this.mail.sent = false;
+        }
+      } else {
+        this.mail.error = true;
+        this.mail.sent = false;
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -114,6 +193,12 @@ export default {};
       #message {
         width: 100% !important;
         height: 150px;
+      }
+      .errorMessage {
+        color: indianred;
+      }
+      .successMessage {
+        color: green;
       }
       button {
         margin: 10px 0;

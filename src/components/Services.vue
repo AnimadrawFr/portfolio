@@ -1,32 +1,32 @@
 <template>
   <div id="services" class="panel">
     <div id="inner-container">
-      <h3>Services</h3>
+      <h3>{{ $t('servicesTitle') }}</h3>
       <div class="tabs">
         <div class="grid-1-4">
           <div
             class="tabs-icon"
-            v-for="(section, i) in sections"
+            v-for="(section, i) in services"
             :key="i"
-            :class="{ 'is-active': section.title == showTab }"
-            @click="switchTab(section.title)"
+            :class="{ 'is-active': $t(section.title) == showTab }"
+            @click="switchTab($t(section.title))"
           >
-            <a href="#" :class="section.icon"></a>
-            <p class="section-title">{{ section.title }}</p>
+            <a href="#" :class="$t(section.icon)"></a>
+            <p class="section-title">{{ $t(section.title) }}</p>
           </div>
         </div>
         <div
-          v-for="(section, i) in sections"
+          v-for="(section, i) in services"
           :key="i"
           class="grid-1-3"
-          v-show="section.title === showTab"
+          v-show="$t(section.title) === showTab"
         >
           <div class="col citation">
-            {{ section.citation }}
-            <p class="author" v-if="section.author">{{ section.author }}</p>
+            {{ $t(section.citation) }}
+            <p class="author" v-if="$t(section.author)">{{ $t(section.author) }}</p>
           </div>
-          <div class="col">{{ section.description }}</div>
-          <div class="col">{{ section.resume }}</div>
+          <div class="col">{{ $t(section.col_1) }}</div>
+          <div class="col">{{ $t(section.col_2) }}</div>
         </div>
       </div>
     </div>
@@ -34,55 +34,13 @@
 </template>
 
 <script>
+import {services} from "@/js/services.js";
+
 export default {
   data: () => {
     return {
-      showTab: "Web designs",
-      sections: [
-        {
-          title: "Web designs",
-          icon: "fas fa-fill-drip",
-          citation:
-            "Design is not making beauty, beauty emerges from selection, affinities, integration, love.",
-          author: "LOUIS KAHN",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.",
-          resume:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.",
-        },
-        {
-          title: "Web sites",
-          icon: "fas fa-code",
-          citation:
-            "Design is not making beauty, beauty emerges from selection, affinities, integration, love.",
-          author: "LOUIS KAHN",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.",
-          resume:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.",
-        },
-        {
-          title: "Web apps",
-          icon: "fas fa-layer-group",
-          citation:
-            "Design is not making beauty, beauty emerges from selection, affinities, integration, love.",
-          author: "LOUIS KAHN",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.",
-          resume:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.",
-        },
-        {
-          title: "Mobile apps",
-          icon: "fas fa-mobile-alt",
-          citation:
-            "Design is not making beauty, beauty emerges from selection, affinities, integration, love.",
-          author: "LOUIS KAHN",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.",
-          resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        },
-      ],
+      showTab: 'UX / UI',
+      services
     };
   },
   methods: {

@@ -2,57 +2,25 @@
   <div id="skills" class="panel">
     <h3>My skills</h3>
     <div id="skills-content" class="grid-2-3">
-      <div class="skill">
-        <i class="icon fab fa-html5"></i>
-        <p class="skill-title">Html 5</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fab fa-js-square"></i>
-        <p class="skill-title">Javascript</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fab fa-css3-alt"></i>
-        <p class="skill-title">Css 3</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fas fa-mobile-alt"></i>
-        <p class="skill-title">Mobile</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fab fa-wordpress"></i>
-        <p class="skill-title">Wordpress</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fab fa-vuejs"></i>
-        <p class="skill-title">Vue Js</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fab fa-php"></i>
-        <p class="skill-title">Php</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fab fa-figma"></i>
-        <p class="skill-title">Figma</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="skill">
-        <i class="icon fas fa-fill-drip"></i>
-        <p class="skill-title">Web design</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="skill" v-for="skill in skillList" :key="skill.title">
+        <i class="icon" :class="$t(skill.icon)"></i>
+        <p class="skill-title">{{ $t(skill.title) }}</p>
+        <p>{{ $t(skill.description) }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import {skills} from "@/js/skills.js"
+
+export default {
+  data() {
+    return {
+      skillList: skills
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

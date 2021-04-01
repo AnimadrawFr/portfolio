@@ -1,8 +1,10 @@
 <template>
   <div id="heading" class="panel">
     <h1>Abstrakts</h1>
-    <h2>Web developper & designer</h2>
-    <button class="btn btn-primary">contact me</button>
+    <h2>{{ $t("subTitle") }}</h2>
+    <a href="#contact">
+      <button class="btn btn-primary toContact">{{ $t("contactMe") }}</button>
+    </a>
     <div class="toAbout" v-animate-css="animations.toAbout">
       <i class="fas fa-chevron-down"></i>
     </div>
@@ -14,7 +16,7 @@
 </template>
 
 <script>
-import {gsap, TweenLite} from 'gsap'
+import { gsap, TweenLite } from "gsap";
 gsap.registerPlugin(TweenLite);
 
 export default {
@@ -29,12 +31,6 @@ export default {
       },
     };
   },
-  mounted() {
-    TweenLite.fromTo('#heading h1', 4, 
-    {y: -10, textShadow: '4px 10px 6px #242424',}, 
-    {y: 10,  textShadow: '4px 2px 2px #242424', ease: 'Power1.easeIn', yoyo: true, repeat: -1}
-    )
-  }
 };
 </script>
 

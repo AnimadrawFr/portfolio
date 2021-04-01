@@ -1,13 +1,14 @@
 <template>
   <div class="home">
+    <Loading v-if="loading" />
     <Navbar />
     <div id="container">
       <Heading />
       <About />
       <Services />
       <Banner />
-      <Portfolio />
-      <StartProject />
+      <!-- <Portfolio /> -->
+      <!-- <StartProject /> -->
       <Skills />
       <Testimonials />
       <Contact />
@@ -17,6 +18,8 @@
 </template>
 
 <script>
+import Loading from "../components/Loading";
+
 import Heading from "../components/Heading";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
@@ -27,7 +30,7 @@ import StartProject from "../components/StartProject";
 import Skills from "../components/Skills";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
-import Foot from "../components/Footer.vue";
+import Foot from "../components/Footer";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -37,6 +40,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "Home",
   components: {
+    Loading,
     Navbar,
     Heading,
     About,
@@ -52,6 +56,7 @@ export default {
   data: function () {
     return {
       trigger: null,
+      loading: true,
     };
   },
   methods: {
@@ -75,12 +80,12 @@ export default {
                 { x: -2, repeat: -1, yoyo: true }
               );
               setTimeout(() => {
-                gsap.to('.fusee', 2, {
+                gsap.to(".fusee", 2, {
                   y: -1000,
                   x: -200,
-                  opacity: 0
-                })
-              }, 500)
+                  opacity: 0,
+                });
+              }, 500);
             },
           });
         },
@@ -88,21 +93,22 @@ export default {
     },
     onRefresh() {
       window.onbeforeunload = () => {
-        window.scrollTo(0, 0)
-      }
-    }
+        window.scrollTo(0, 0);
+      };
+    },
   },
   mounted() {
-    const containerX = document.body.offsetWidth; // Document width
+    /*const containerX = document.querySelector("#heading").offsetWidth; // Document width
     const containerY =
       window.innerWidth <= 720
         ? document.body.offsetHeight / 8
         : document.body.offsetHeight / 2; // Document height
     let buildAsteroid;
+    let scrollY = null;
 
-    function createAsteroid() {
-      buildAsteroid = setInterval(() => {
-        const scrollY = window.scrollY;
+    buildAsteroid = setInterval(() => {
+      if (window.innerWidth < 780) {
+        scrollY = window.scrollY;
         const sizeRandom =
           window.innerWidth <= 720 ? 1 : `${Math.random() * 2}`;
 
@@ -112,7 +118,7 @@ export default {
 
         const randomX = Math.floor(Math.random() * containerX) + 1;
 
-        v.style.top = `${scrollY - 50}px`;
+        v.style.top = 0;
         v.style.right = `${randomX}px`;
         v.style.transform = "rotate(45deg) scale(" + sizeRandom + ")";
 
@@ -125,21 +131,13 @@ export default {
             document.body.removeChild(v);
           },
         });
-      }, 3000);
-    }
+      }
+    }, 5000); */
 
-    window.addEventListener("load", () => {
-      //createAsteroid(),
-      this.onScroll();
-      this.onRefresh();
-    });
+    this.onScroll();
+    this.onRefresh();
 
-    /*window.addEventListener("focus", () => {
-      createAsteroid()
-    });
-
-    window.addEventListener("blur", () => {
-      console.log("blur");
+    /*window.addEventListener("blur", () => {
       clearInterval(buildAsteroid);
     });*/
   },
@@ -155,6 +153,7 @@ $rand: random(2);
   background-size: auto 100%;
   height: 200px;
   width: 200px;
+  pointer-events: none;
   animation: an-frame-animation 3s steps(48) infinite;
 }
 
