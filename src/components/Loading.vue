@@ -31,6 +31,7 @@ export default {
   mounted() {
     setTimeout(() => {
       document.getElementById("loader").style.opacity = 0;
+      document.getElementById("loader").style.pointerEvents = 'none';
       setTimout(() => {
         this.loading = false;
       }, 1000);
