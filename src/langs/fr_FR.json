@@ -4,8 +4,9 @@
   "aboutMe": "A propos de moi",
   "aboutMe-citation": "N’importe quel idiot peut écrire du code qu'un ordinateur peut comprendre. Les bons programmeurs écrivent du code que les humains peuvent comprendre.",
   "aboutMe-citation-author": "MARTIN FOWLER",
-  "aboutMe-first-bloc": "Bonjour et bienvenue sur mon site, je suis Abstrakts. Passionné depuis le plus jeune âge par la technologie et plus principalement je me suis très rapidement dit qu'il exisitai de multiples possibilité, presque infinie en terme de développement.",
-  "aboutMe-second-bloc": "C'est pourquoi j'ai d'abord entrepris des études de design, ayant une oeil taillé pour les arts graphiques. Pour ensuite entreprendre un long chemin vers l'apprentissage du développement web (L'un allant pas sans l'autre à mon sens). Méticuleux, passionné et à l'écoute, je saurais vous accompagner dans vos divers projets.",
+  "aboutMe-first-bloc": "Bonjour et bienvenue sur mon site, je suis Abstrakts. Passionné depuis le plus jeune âge par la technologie. Je me suis très rapidement dit qu'il exisitai de multiples possibilité, presque infinie en terme de développement.",
+  "aboutMe-second-bloc": "C'est pourquoi j'ai d'abord entrepris des études de design, ayant un oeil taillé pour les arts graphiques. Pour ensuite entreprendre un long chemin vers l'apprentissage du développement web (L'un allant pas sans l'autre à mon sens). Méticuleux, passionné et à l'écoute, je saurais vous accompagner dans vos divers projets.",
+  "personnalProjects": "Mes projets personnel",
   "importantsProjects": {
     "first": {
       "title": "MyReptileScan",
@@ -34,7 +35,7 @@
       "citation": "Il semble que la perfection soit atteinte non quand il n’y a plus rien à ajouter, mais quand il n’y a plus rien à retrancher.",
       "auhtor": "Antoine de Saint-Exupéry",
       "col_1": "Qu'il s'agisse de votre portfolio, de votre site de présentation ou de votre e-commerce, ...",
-      "col_2": "je vous accompagnerai dans les moindres détails de votre projet afin de vous fournir un site et une expérience réussite."
+      "col_2": "je vous accompagnerai dans les moindres détails de votre projet afin de vous fournir un site et une expérience réussie."
     },
     "third": {
       "title": "Développement mobile",
@@ -77,47 +78,47 @@
     "html" : {
       "title" : "HTML 5",
       "icon" : "fab fa-html5",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "js" : {
       "title" : "JAVASCRIPT",
       "icon" : "fab fa-js-square",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "css" : {
       "title" : "CSS 3",
       "icon" : "fab fa-css3-alt",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "mobile" : {
       "title" : "MOBILE",
       "icon" : "fas fa-mobile-alt",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "wordpress" : {
       "title" : "WORDPRESS",
       "icon" : "fab fa-wordpress",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "vue" : {
       "title" : "VUE JS",
       "icon" : "fab fa-vuejs",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "php" : {
       "title" : "PHP",
       "icon" : "fab fa-php",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "figma" : {
       "title" : "FIGMA",
       "icon" : "fab fa-figma",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "ui" : {
       "title" : "UI / UX",
       "icon" : "fas fa-fill-drip",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     }
   },
   "testimonialsTitle" : "Que disent-ils ?",

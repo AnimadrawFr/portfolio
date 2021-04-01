@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <h3>Personnals projects</h3>
+      <h3>{{ $t('personnalProjects') }}</h3>
       <div id="projects" class="grid-1-3">
         <div
           class="col card"

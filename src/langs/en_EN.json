@@ -2,10 +2,11 @@
   "subTitle": "Web developper & designer",
   "contactMe": "Contact me",
   "aboutMe": "About me",
-  "aboutMe-ciration": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+  "aboutMe-citation": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
   "aboutMe-citation-author": "MARTIN FOWLER",
   "aboutMe-first-bloc": "Hello and welcome to my site, I am Abstrakts. Passionate from a young age by technology and more mainly I quickly told myself that there are many possibilities, almost infinite in terms of development.",
   "aboutMe-second-bloc": "This is why I first undertook design studies, having an eye for the graphic arts. To then undertake a long road towards learning web development (One not without the other in my opinion). Meticulous, passionate and attentive, I can support you in your various projects.",
+  "personnalProjects" : "Personal projects",
   "importantsProjects": {
     "first": {
       "title": "MyReptileScan",
@@ -26,29 +27,29 @@
       "title": "UX / UI",
       "citation": "The essence of a project is the perfect harmony between the aesthetic, the useful and the fair.",
       "author": "Frank Lloyd Wright",
-      "col-1": "Graphic designer and web designer for more than 7 years now, the basics of UX and UI are no longer a secret to me.",
-      "col-2": "By carrying out your project, I will make sure that the users of your site are pleasantly surprised by the ease of navigation through your pages."
+      "col_1": "Graphic designer and web designer for more than 7 years now, the basics of UX and UI are no longer a secret to me.",
+      "col_2": "By carrying out your project, I will make sure that the users of your site are pleasantly surprised by the ease of navigation through your pages."
     },
     "second": {
       "title": "Web development",
       "citation": "It seems that perfection is achieved not when there is nothing more to add, but when there is nothing more to take away.",
       "author": "Antoine de Saint-Exupéry",
-      "col-1": "Whether it's your portfolio, your presentation site or your e-commerce, ...",
-      "col-2": "I will accompany you in every detail of your project in order to provide you with a site and a successful experience."
+      "col_1": "Whether it's your portfolio, your presentation site or your e-commerce, ...",
+      "col_2": "I will accompany you in every detail of your project in order to provide you with a site and a successful experience."
     },
     "third": {
       "title": "Mobile development",
       "citation": "Any code you've been writing for 6 months or more without looking at it might as well have been written by someone else.",
       "author": "Alan Eagleson",
-      "col-1": "Do you need to create a mobile application to manage your business more easily or for any project?",
-      "col-2": "Do not hesitate any longer, the mobile experience is constantly expanding, I can adapt to all your requests."
+      "col_1": "Do you need to create a mobile application to manage your business more easily or for any project?",
+      "col_2": "Do not hesitate any longer, the mobile experience is constantly expanding, I can adapt to all your requests."
     },
     "forth": {
       "title": "Graphic identity",
       "citation": "Computer science education cannot make anyone an expert programmer any more than the study of brushes and pigment can make someone an expert painter.",
       "author": "Eric S. Raymond",
-      "col-1": "Are you opening a new business or do you simply want to change the graphic identity of your activity?",
-      "col-2": "Business card, logos, signs, etc ... My expertise will be entirely at your service."
+      "col_1": "Are you opening a new business or do you simply want to change the graphic identity of your activity?",
+      "col_2": "Business card, logos, signs, etc ... My expertise will be entirely at your service."
     }
   },
   "bannerTitle" : "You have a project ?",
@@ -77,47 +78,47 @@
     "html" : {
       "title" : "HTML 5",
       "icon" : "fab fa-html5",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "js" : {
       "title" : "JAVASCRIPT",
       "icon" : "fab fa-js-square",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "css" : {
       "title" : "CSS 3",
       "icon" : "fab fa-css3-alt",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "mobile" : {
       "title" : "MOBILE",
       "icon" : "fas fa-mobile-alt",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "wordpress" : {
       "title" : "WORDPRESS",
       "icon" : "fab fa-wordpress",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "vue" : {
       "title" : "VUE JS",
       "icon" : "fab fa-vuejs",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "php" : {
       "title" : "PHP",
       "icon" : "fab fa-php",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "figma" : {
       "title" : "FIGMA",
       "icon" : "fab fa-figma",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     },
     "ui" : {
       "title" : "UI / UX",
       "icon" : "fas fa-fill-drip",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description" : ""
     }
   },
   "testimonialsTitle" : "What people say ?",

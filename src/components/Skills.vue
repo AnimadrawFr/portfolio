@@ -1,6 +1,6 @@
 <template>
   <div id="skills" class="panel">
-    <h3>My skills</h3>
+    <h3>{{ $t('skills') }}</h3>
     <div id="skills-content" class="grid-2-3">
       <div class="skill" v-for="skill in skillList" :key="skill.title">
         <i class="icon" :class="$t(skill.icon)"></i>
