@@ -1,11 +1,26 @@
 <template>
   <div id="app">
     <router-view />
+    <div class="counter d-none">
+      counter : 0
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
+  methods: {
+    async updateCounter() {
+      const data = await fetch('https://api.countapi.xyz/hit/abstrakts-dp-counter-prod/visits')
+      const count = await data.json()
+
+      document.querySelector('.counter').innerHTML = 'counter : ' + count.value
+    }
+  },
+  created() {
+    this.updateCounter()
+  },
   metaInfo() {
     return {
       title: 'Abstrakts.fr | Web developper & designer',
@@ -28,5 +43,9 @@ export default {
 body,
 html {
   scroll-behavior: smooth;
+}
+
+.d-none {
+  display: none
 }
 </style>

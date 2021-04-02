@@ -15,6 +15,7 @@
     "vue": "^2.6.11",
     "vue-axios": "^3.2.4",
     "vue-fb-customer-chat": "^0.2.0",
+    "vue-gtm": "^3.5.0",
     "vue-i18n": "^8.22.4",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.2.0",
